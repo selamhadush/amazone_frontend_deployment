@@ -39,5 +39,5 @@ app.post("/payment/create", async (req, res) => {
 });
 app.listen(5000, (err) => {
   if (err) throw err;
-  console.log("amazon server runing on port: 5000, http://localhost:5000 ");
+  console.log("server runing on port: 5000, http://localhost:5000 ");
 });
