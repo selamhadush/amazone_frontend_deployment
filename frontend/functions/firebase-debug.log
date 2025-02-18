@@ -1,33 +1,33 @@
-[debug] [2025-02-17T18:06:26.341Z] ----------------------------------------------------------------------
-[debug] [2025-02-17T18:06:26.346Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\selam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
-[debug] [2025-02-17T18:06:26.346Z] CLI Version:   13.30.0
-[debug] [2025-02-17T18:06:26.346Z] Platform:      win32
-[debug] [2025-02-17T18:06:26.347Z] Node Version:  v20.16.0
-[debug] [2025-02-17T18:06:26.347Z] Time:          Mon Feb 17 2025 21:06:26 GMT+0300 (East Africa Time)
-[debug] [2025-02-17T18:06:26.347Z] ----------------------------------------------------------------------
+[debug] [2025-02-18T14:49:23.893Z] ----------------------------------------------------------------------
+[debug] [2025-02-18T14:49:23.897Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\selam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2025-02-18T14:49:23.898Z] CLI Version:   13.30.0
+[debug] [2025-02-18T14:49:23.898Z] Platform:      win32
+[debug] [2025-02-18T14:49:23.899Z] Node Version:  v20.16.0
+[debug] [2025-02-18T14:49:23.899Z] Time:          Tue Feb 18 2025 17:49:23 GMT+0300 (East Africa Time)
+[debug] [2025-02-18T14:49:23.899Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2025-02-17T18:06:26.806Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-02-17T18:06:26.806Z] > authorizing via signed-in user (solhadush.27@gmail.com)
+[debug] [2025-02-18T14:49:24.289Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-18T14:49:24.290Z] > authorizing via signed-in user (solhadush.27@gmail.com)
 [info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
-[debug] [2025-02-17T18:06:26.825Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-02-17T18:06:26.826Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2025-02-17T18:06:26.837Z] [hub] writing locator at C:\Users\selam\AppData\Local\Temp\hub-clone-32c9b.json
-[debug] [2025-02-17T18:06:26.889Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-02-17T18:06:26.889Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-02-17T18:06:26.889Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-02-17T18:06:26.889Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2025-02-18T14:49:24.305Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-02-18T14:49:24.305Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-02-18T14:49:24.315Z] [hub] writing locator at C:\Users\selam\AppData\Local\Temp\hub-clone-32c9b.json
+[debug] [2025-02-18T14:49:24.353Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-02-18T14:49:24.354Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-02-18T14:49:24.354Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-02-18T14:49:24.354Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
 [warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
-[debug] [2025-02-17T18:06:26.896Z] defaultcredentials: writing to file C:\Users\selam\AppData\Roaming\firebase\solhadush_27_gmail.com_application_default_credentials.json
-[debug] [2025-02-17T18:06:26.901Z] Setting GAC to C:\Users\selam\AppData\Roaming\firebase\solhadush_27_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\selam\\AppData\\Roaming\\firebase\\solhadush_27_gmail.com_application_default_credentials.json"}}
-[debug] [2025-02-17T18:06:26.902Z] Checked if tokens are valid: true, expires at: 1739818664851
-[debug] [2025-02-17T18:06:26.902Z] Checked if tokens are valid: true, expires at: 1739818664851
-[debug] [2025-02-17T18:06:26.903Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-32c9b/adminSdkConfig [none]
-[debug] [2025-02-17T18:06:28.185Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-32c9b/adminSdkConfig 200
-[debug] [2025-02-17T18:06:28.185Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-32c9b/adminSdkConfig {"projectId":"clone-32c9b","storageBucket":"clone-32c9b.firebasestorage.app"}
+[debug] [2025-02-18T14:49:24.359Z] defaultcredentials: writing to file C:\Users\selam\AppData\Roaming\firebase\solhadush_27_gmail.com_application_default_credentials.json
+[debug] [2025-02-18T14:49:24.364Z] Setting GAC to C:\Users\selam\AppData\Roaming\firebase\solhadush_27_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\selam\\AppData\\Roaming\\firebase\\solhadush_27_gmail.com_application_default_credentials.json"}}
+[debug] [2025-02-18T14:49:24.365Z] Checked if tokens are valid: true, expires at: 1739891873165
+[debug] [2025-02-18T14:49:24.366Z] Checked if tokens are valid: true, expires at: 1739891873165
+[debug] [2025-02-18T14:49:24.367Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-32c9b/adminSdkConfig [none]
+[debug] [2025-02-18T14:49:25.182Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-32c9b/adminSdkConfig 200
+[debug] [2025-02-18T14:49:25.183Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-32c9b/adminSdkConfig {"projectId":"clone-32c9b","storageBucket":"clone-32c9b.firebasestorage.app"}
 [info] i  functions: Watching "C:\Users\selam\Desktop\evangadi class\phase 4 projects\Amazonclone_proj\amazonclone_proj\frontend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\selam\\Desktop\\evangadi class\\phase 4 projects\\Amazonclone_proj\\amazonclone_proj\\frontend\\functions\" for Cloud Functions..."}}
-[debug] [2025-02-17T18:06:28.311Z] Validating nodejs source
+[debug] [2025-02-18T14:49:25.633Z] Validating nodejs source
 [warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
-[debug] [2025-02-17T18:06:34.793Z] > [functions] package.json contents: {
+[debug] [2025-02-18T14:49:27.748Z] > [functions] package.json contents: {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
@@ -57,9 +57,9 @@
   },
   "private": true
 }
-[debug] [2025-02-17T18:06:34.794Z] Building nodejs source
-[debug] [2025-02-17T18:06:34.794Z] Failed to find version of module node: reached end of search path C:\Users\selam\Desktop\evangadi class\phase 4 projects\Amazonclone_proj\amazonclone_proj\frontend\functions\node_modules
+[debug] [2025-02-18T14:49:27.748Z] Building nodejs source
+[debug] [2025-02-18T14:49:27.749Z] Failed to find version of module node: reached end of search path C:\Users\selam\Desktop\evangadi class\phase 4 projects\Amazonclone_proj\amazonclone_proj\frontend\functions\node_modules
 [warn] !  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
 [info] i  functions: Loaded environment variables from .env. 
-[debug] [2025-02-17T18:06:34.807Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-02-17T18:06:34.820Z] Found firebase-functions binary at 'C:\Users\selam\Desktop\evangadi class\phase 4 projects\Amazonclone_proj\amazonclone_proj\frontend\functions\node_modules\.bin\firebase-functions'
+[debug] [2025-02-18T14:49:27.756Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-02-18T14:49:27.771Z] Found firebase-functions binary at 'C:\Users\selam\Desktop\evangadi class\phase 4 projects\Amazonclone_proj\amazonclone_proj\frontend\functions\node_modules\.bin\firebase-functions'

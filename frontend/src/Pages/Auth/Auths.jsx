@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import classes from "./SignUp.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/loginlogo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { auth } from "../../Utility/fireBase";
@@ -11,6 +11,7 @@ import {
 import { DataContext } from "../../components/DataProvider/DataProvider";
 import { Type } from "../../Utility/action.type";
 import ClipLoader from "react-spinners/ClipLoader";
+
 function Auths() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -19,17 +20,18 @@ function Auths() {
   const [{ user }, dispatch] = useContext(DataContext);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState({
-    signIn:false,
-    signUp:false
-   });
-   const navigate = useNavigate();
+    signIn: false,
+    signUp: false,
+  });
+  const navigate = useNavigate();
+  const navStateData = useLocation();
   // console.log(email, password);
   // console.log(user);
   const authHandler = (e) => {
     e.preventDefault();
     console.log(e.target.name);
     if (e.target.name == "signin") {
-      setLoading({...loading, signIn:true})
+      setLoading({ ...loading, signIn: true });
       //start firebase authentication
       signInWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
@@ -38,15 +40,15 @@ function Auths() {
             type: Type.SET_USER,
             user: userInfo.user,
           });
-          setLoading({...loading, signIn:false})
-          navigate("/");
+          setLoading({ ...loading, signIn: false });
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
-          setLoading({...loading, signIn:false})
+          setLoading({ ...loading, signIn: false });
         });
     } else if (e.target.name == "register") {
-      setLoading({...loading, signUp:true})
+      setLoading({ ...loading, signUp: true });
       createUserWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           console.log(userInfo);
@@ -54,12 +56,13 @@ function Auths() {
             type: Type.SET_USER,
             user: userInfo.user,
           });
-          setLoading({...loading, signUp:false});
-          navigate("/");
+          setLoading({ ...loading, signUp: false });
+          // navigate("/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
-          setLoading({...loading, signUp:false});
+          setLoading({ ...loading, signUp: false });
         });
     }
   };
@@ -70,6 +73,18 @@ function Auths() {
       </Link>
       <div className={classes.login_container}>
         <h1>Sign In</h1>
+        {navStateData?.state?.msg && (
+          <small
+            style={{
+              padding: "5px",
+              textAlign: "center",
+              color: "red",
+              fontWeight: "bold",
+            }}
+          >
+            {navStateData.state.msg}
+          </small>
+        )}
         <form action="">
           <div>
             <label htmlFor="email">Email</label>
@@ -95,8 +110,9 @@ function Auths() {
             name="signin"
             className={classes.login_signin_btn}
           >
-            {loading.signIn?(<ClipLoader color="#000" size={15}></ClipLoader>
-            ):(
+            {loading.signIn ? (
+              <ClipLoader color="#000" size={15}></ClipLoader>
+            ) : (
               "signIn"
             )}
           </button>
@@ -174,14 +190,13 @@ function Auths() {
         name="register"
         className={classes.signup_btn}
       >
-         {loading.signUp? (
+        {loading.signUp ? (
           <ClipLoader color="#000" size={15}></ClipLoader>
-            ):(
-              " Create your Amazon clone account"
-            )}
-       
+        ) : (
+          " Create your Amazon clone account"
+        )}
       </button>
-      {error &&<small style={{pading:"5px", color:"red"}} >{error}</small>}
+      {error && <small style={{ pading: "5px", color: "red" }}>{error}</small>}
     </section>
   );
 }
