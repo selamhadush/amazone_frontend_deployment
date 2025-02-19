@@ -135,6 +135,48 @@
   gap: 2px;
   align-items: center;
 }
+.languageDropdown {
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  right: 95px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  /* text-align: center;  */ 
+}
+ .languageDropdown form {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageDropdown div {
+  margin-bottom: 10px;
+}
+
+.languageDropdown input[type="radio"] {
+  margin-right: 5px; 
+  margin-left: 5px;/* Space between radio button and label */
+}
+
+.languageDropdown label {
+  cursor: pointer;
+  font-size: 16px;
+  color:black;
+  padding:5px;
+  margin-left:5px;
+}
+
+.languageDropdown input[type="radio"]:checked + label {
+  font-weight: bold; /* Highlight selected language */
+}
+
+.languageDropdown label:hover {
+  background-color: #f0f0f0;
+}
+
 @media screen and (max-width: 676px) {
   .header_container {
     display: flex;

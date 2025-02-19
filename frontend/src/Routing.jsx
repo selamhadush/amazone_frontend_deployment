@@ -7,6 +7,7 @@ import Orders from "./Pages/Orders/Orders";
 import Cart from "./Pages/Cart/Cart";
 import Results from "./Pages/Results/Results";
 import ProductDetail from "./Pages/productDetail/productDetail";
+import All from "./Pages/All/All";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
@@ -52,6 +53,7 @@ function Routing() {
           <Route path="/category/:categoryName" element={<Results />} />
           <Route path="/products/:productId" element={<ProductDetail />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/All" element={<All />} />
         </Routes>
       </Router>
     </div>
