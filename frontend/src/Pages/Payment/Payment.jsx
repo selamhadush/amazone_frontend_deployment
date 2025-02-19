@@ -11,8 +11,9 @@ import { axiosInstance } from "../../API/axios";
 import { ClipLoader } from "react-spinners";
 import { db, auth } from "../../Utility/fireBase.js";
 import { useNavigate } from "react-router-dom";
+import { Type } from "../../Utility/action.type";
 function Payment() {
-  const [{ user, basket }] = useContext(DataContext);
+  const [{ user, basket }, dispatch] = useContext(DataContext);
   const totalItems = basket?.reduce((amount, item) => {
     return item.amount + amount;
   }, 0);
@@ -74,6 +75,8 @@ function Payment() {
         );
 
         console.log("Payment details saved successfully.");
+        // after payment empty the basket
+        dispatch({type:Type.EMPTY_BASKET})
       } catch (error) {
         console.error("Error saving payment details:", error);
       }
