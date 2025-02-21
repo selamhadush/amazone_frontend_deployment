@@ -1,10 +1,10 @@
-const { onRequest } = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
-const express = require("express");
-const cors = require("cors");
-const dotenv = require("dotenv");
+import { onRequest } from "firebase-functions/v2/https";
+// const logger = require("firebase-functions/logger");
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 dotenv.config();
-const stripe = require("stripe")(process.env.STRIPE_KEY);
+import stripe from "stripe"; //(process.env.STRIPE_KEY);
 
 const app = express();
 app.use(cors({ origin: true }));
@@ -19,7 +19,9 @@ app.post("/payment/create", async (req, res) => {
   const total = parseInt(req.query.total);
   try {
     if (total > 0) {
-      const paymentIntent = await stripe.paymentIntents.create({
+      const paymentIntent = await stripe(
+        process.env.STRIPE_KEY
+      ).paymentIntents.create({
         amount: total,
         currency: "usd",
       });
@@ -38,4 +40,4 @@ app.post("/payment/create", async (req, res) => {
       .json({ message: "Error creating payment intent", error: error.message });
   }
 });
-exports.api = onRequest(app);
+export const api = onRequest(app);

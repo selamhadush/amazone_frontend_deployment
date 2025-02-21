@@ -1,6 +1,7 @@
 {
   "projects": {
-    " dev": "clone-32c9b"
+    " dev": "clone-32c9b",
+    "default": "clone-32c9b"
   },
   "targets": {},
   "etags": {}
