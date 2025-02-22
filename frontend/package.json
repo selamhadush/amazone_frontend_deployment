@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "react-scripts build",
+    "postbuild": "mv frontend/dist/* ./",
     "lint": "eslint .",
     "preview": "vite preview"
   },

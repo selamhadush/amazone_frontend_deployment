@@ -9,6 +9,7 @@ firebase-debug.*.log*
 .env
 # Firebase cache
 .firebase/
+frontend/dist/
 
 # Firebase config
 
