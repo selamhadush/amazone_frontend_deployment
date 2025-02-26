@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import beautypro from "./beautypro.jpg";
 import gamingstore from "./gamingstore.jpg";
 import kitchenfavorites from "./kitchenfavorites.jpg";
