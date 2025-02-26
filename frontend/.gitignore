@@ -7,6 +7,7 @@ yarn-error.log*
 firebase-debug.log*
 firebase-debug.*.log*
 .env
+frontend/build/
 # Firebase cache
 .firebase/
 frontend/dist/
